@@ -1,0 +1,60 @@
+name: Update README cards
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate top languages card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate portfolio pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=maxecution&repo=my-portfolio
+          path: profile/pin-my-portfolio.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Game News pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=maxecution&repo=discord-game-news-bot
+          path: profile/pin-discord-game-news-bot.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate DRW Helper pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=maxecution&repo=DRW-helper
+          path: profile/pin-drw-helper.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Nox Bot pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=maxecution&repo=discord-nox-bot
+          path: profile/pin-discord-nox.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "Update README cards" || exit 0
+          git push
