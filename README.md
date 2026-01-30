@@ -39,17 +39,31 @@ CURIOUS BY NATURE • UX FOCUSED • CO-OP PLAYER • DETAIL ORIENTED
 </div>
 
 ```ts
-class FrontendEngineer {
-  name = 'Max';
-  role = 'Software Engineer';
-  focus = ['Frontend', 'UI Engineering', 'Performance'];
+type Tech = 'TypeScript' | 'React' | 'Next.js';
 
-  sayHi() {
-    return 'Thanks for stopping by — explore my work below.';
+type FocusArea = 'Frontend' | 'UI Design' | 'Testing' | 'Accessibility';
+
+interface Profile {
+  readonly name: string;
+  readonly role: string;
+  readonly stack: readonly Tech[];
+  readonly focus: readonly FocusArea[];
+  greet(): string;
+}
+
+class Engineer implements Profile {
+  readonly name = 'Max';
+  readonly role = 'Software Engineer';
+  readonly stack = ['TypeScript', 'React', 'Next.js'] as const;
+  readonly focus = ['Frontend', 'UI Design', 'Testing', 'Accessibility'] as const;
+
+  greet(): string {
+    return `Thank you for stopping by. Feel free to explore my work below.`;
   }
 }
 
-new FrontendEngineer().sayHi();
+const me = new Engineer();
+me.greet();
 ```
 
 ---
