@@ -15,7 +15,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&theme=slateorange
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -23,7 +23,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=maxecution&repo=my-portfolio
+          options: username=maxecution&repo=my-portfolio&theme=slateorange
           path: profile/pin-my-portfolio.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -31,7 +31,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=maxecution&repo=discord-game-news-bot
+          options: username=maxecution&repo=discord-game-news-bot&theme=slateorange
           path: profile/pin-discord-game-news-bot.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -39,7 +39,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=maxecution&repo=DRW-helper
+          options: username=maxecution&repo=DRW-helper&theme=slateorange
           path: profile/pin-drw-helper.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -47,7 +47,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=maxecution&repo=discord-nox-bot
+          options: username=maxecution&repo=discord-nox-bot&theme=slateorange
           path: profile/pin-discord-nox.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
