@@ -70,7 +70,7 @@ new FrontendEngineer().sayHi();
 
 ### Project Highlights
 
-**Currently working on** <a href="https://github.com/maxecution/discord-nox-bot" style="color: #d4af37; text-decoraton: none;">Nox</a>, my first Discord bot.
+**Currently working on** <a href="https://github.com/maxecution/discord-nox-bot">Nox</a>, my first Discord bot.
 
   <a href="https://github.com/maxecution/my-portfolio">
     <img src="profile/pin-my-portfolio.svg" alt="My Portfolio repo card" title="My Portfolio repo card"/>
