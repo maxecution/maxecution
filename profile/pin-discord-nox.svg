@@ -100,7 +100,7 @@
     
 
     <text class="description" x="25" y="-5">
-      <tspan dy="1.2em" x="25">My first discord bot - WIP</tspan>
+      <tspan dy="1.2em" x="25">My first Discord bot built on discord.js v14</tspan>
     </text>
 
     <g transform="translate(30, 75)">
